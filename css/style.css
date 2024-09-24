@@ -9,7 +9,7 @@
 
 *{
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
@@ -46,6 +46,19 @@ body{
     background: var(--bg);
 }
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
 .header{
     background: var(--bg);
     display: flex;
@@ -124,18 +137,62 @@ body{
 
 .header .cart-items-container{
     position: absolute;
-    top: 100%; right: 0;
+    top: 100%; right: -100%;
     height: calc(100vh - 9.5rem);
     width: 35rem;
     background: #fff;
     padding: 0 1.5rem;
 }
 
-.header .cart-items-container .cart-item{
+.header .cart-items-container .cart-item {
     position: relative;
     margin: 2rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    /* overflow: hidden; */
+    /* width: 250px; height: 150px;
+    /* border-radius: 10px; */
+    /* background: #08ca9a; */
 }
 
+/* .header .cart-items-container .cart-item img {
+    width: 45%;
+    /* Make image fill the container */
+/* height: auto; */
+/* Maintain aspect ratio */
+/* border-radius: 50%;} */
+/* Optional: Apply border-radius to image if desired  */
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
